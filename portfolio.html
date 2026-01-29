@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Noman | Frontend Developer Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- AOS for scroll animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#0C7779',
+            dark: '#051111',
+            darker: '#020808',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+    .glass { backdrop-filter: blur(12px); background-color: rgba(12, 119, 121, 0.05); border: 1px solid rgba(12, 119, 121, 0.1); }
+    .neon-glow { text-shadow: 0 0 10px rgba(12, 119, 121, 0.6), 0 0 20px rgba(12, 119, 121, 0.3); }
+    .brand-gradient { background: linear-gradient(135deg, #0C7779 0%, #14b8a6 100%); }
+    .text-brand-gradient { 
+      background: linear-gradient(to right, #0C7779, #2dd4bf);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+    .custom-scrollbar::-webkit-scrollbar-track { background: #020808; }
+    .custom-scrollbar::-webkit-scrollbar-thumb { background: #0C7779; border-radius: 10px; }
+  </style>
+</head>
+<body class="bg-darker text-white custom-scrollbar overflow-x-hidden">
+
+  <!-- NAVBAR -->
+  <nav class="fixed w-full top-0 left-0 flex justify-between items-center px-6 md:px-12 py-4 glass z-50 border-b border-brand/10">
+    <div class="text-xl font-bold tracking-tighter">
+      M.<span class="text-[#0C7779]">NOMAN</span>
+    </div>
+    <ul class="hidden md:flex gap-8 text-sm uppercase tracking-widest font-medium">
+      <li><a href="#about" class="hover:text-brand transition-colors">About</a></li>
+      <li><a href="#skills" class="hover:text-brand transition-colors">Skills</a></li>
+      <li><a href="#projects" class="hover:text-brand transition-colors">Projects</a></li>
+      <li><a href="#contact" class="hover:text-brand transition-colors">Contact</a></li>
+    </ul>
+    <div class="md:hidden text-brand">
+       <i class="fas fa-bars text-2xl"></i>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="relative min-h-screen flex items-center pt-24 px-6 md:px-12 overflow-hidden">
+    <!-- Background Decor -->
+    <div class="absolute top-1/4 -left-20 w-72 h-72 bg-brand/20 rounded-full blur-[120px]"></div>
+    <div class="absolute bottom-1/4 -right-20 w-96 h-96 bg-brand/10 rounded-full blur-[150px]"></div>
+
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
+      <!-- LEFT -->
+      <div class="space-y-8" data-aos="fade-right">
+        <div>
+          <span class="text-brand font-mono tracking-widest uppercase text-sm mb-4 block">Available for Freelance</span>
+          <h1 class="text-6xl md:text-7xl font-extrabold leading-tight">
+            Design & Build <br> 
+            <span class="text-brand-gradient neon-glow">Experiences.</span>
+          </h1>
+        </div>
+        <p class="text-gray-400 max-w-lg text-lg leading-relaxed">
+          I'm <span class="text-white font-semibold">Muhammad Noman</span>, a Frontend Developer specialized in crafting high-performance, responsive web interfaces with modern tech stacks.
+        </p>
+        <div class="flex flex-wrap gap-5">
+          <a href="#contact" class="px-8 py-4 bg-brand text-white font-bold rounded-full shadow-[0_0_20px_rgba(12,119,121,0.3)] hover:shadow-[0_0_30px_rgba(12,119,121,0.5)] transition-all transform hover:-translate-y-1">
+            Let's Talk
+          </a>
+          <a href="#" class="px-8 py-4 border border-brand/30 hover:border-brand text-white font-bold rounded-full transition-all flex items-center gap-2">
+            View Work <i class="fas fa-arrow-right text-sm"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="flex justify-center md:justify-end" data-aos="zoom-out" data-aos-delay="200">
+        <div class="relative group">
+          <div class="absolute -inset-1 bg-gradient-to-r from-brand to-teal-400 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+          <div class="relative w-64 h-64 md:w-80 md:h-80 bg-dark rounded-full flex items-center justify-center border border-brand/20">
+            <!-- Icon placeholder - replace with <img> for profile photo -->
+            <i class="fas fa-code text-7xl text-brand/50"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-32 px-6 md:px-12 bg-dark/30">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex flex-col items-center text-center mb-16" data-aos="fade-up">
+        <h2 class="text-4xl font-bold mb-4">About Me</h2>
+        <div class="w-20 h-1 bg-brand rounded-full"></div>
+      </div>
+      <div class="glass p-10 rounded-3xl text-gray-300 leading-loose text-lg border-l-4 border-l-brand" data-aos="fade-up">
+        <p>
+          I am a dedicated Frontend Developer based in Pakistan with a sharp eye for detail. With over a year of experience, I bridge the gap between complex backend logic and elegant user interfaces. My mission is to build digital products that are not only visually stunning but also highly functional and accessible to everyone.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="py-32 px-6 md:px-12">
+    <div class="flex flex-col items-center text-center mb-20" data-aos="fade-up">
+      <h2 class="text-4xl font-bold mb-4">Tech Stack</h2>
+      <p class="text-gray-400">Tools and technologies I use to bring ideas to life.</p>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 max-w-6xl mx-auto">
+      <!-- Skill Item -->
+      <div class="glass p-8 rounded-2xl text-center group hover:bg-brand/10 transition-all border-b-2 border-transparent hover:border-brand" data-aos="flip-left">
+        <i class="fab fa-html5 text-4xl text-[#E34F26] mb-4"></i>
+        <h3 class="font-medium text-sm tracking-widest uppercase">HTML5</h3>
+      </div>
+      <div class="glass p-8 rounded-2xl text-center group hover:bg-brand/10 transition-all border-b-2 border-transparent hover:border-brand" data-aos="flip-left" data-aos-delay="100">
+        <i class="fab fa-css3-alt text-4xl text-[#1572B6] mb-4"></i>
+        <h3 class="font-medium text-sm tracking-widest uppercase">CSS3</h3>
+      </div>
+      <div class="glass p-8 rounded-2xl text-center group hover:bg-brand/10 transition-all border-b-2 border-transparent hover:border-brand" data-aos="flip-left" data-aos-delay="200">
+        <i class="fab fa-js text-4xl text-[#F7DF1E] mb-4"></i>
+        <h3 class="font-medium text-sm tracking-widest uppercase">JavaScript</h3>
+      </div>
+      <div class="glass p-8 rounded-2xl text-center group hover:bg-brand/10 transition-all border-b-2 border-transparent hover:border-brand" data-aos="flip-left" data-aos-delay="300">
+        <i class="fab fa-react text-4xl text-[#61DAFB] mb-4"></i>
+        <h3 class="font-medium text-sm tracking-widest uppercase">React</h3>
+      </div>
+      <div class="glass p-8 rounded-2xl text-center group hover:bg-brand/10 transition-all border-b-2 border-transparent hover:border-brand" data-aos="flip-left" data-aos-delay="400">
+        <i class="fab fa-github text-4xl text-white mb-4"></i>
+        <h3 class="font-medium text-sm tracking-widest uppercase">Git</h3>
+      </div>
+      <div class="glass p-8 rounded-2xl text-center group hover:bg-brand/10 transition-all border-b-2 border-transparent hover:border-brand" data-aos="flip-left" data-aos-delay="500">
+        <i class="fas fa-wind text-4xl text-[#06B6D4] mb-4"></i>
+        <h3 class="font-medium text-sm tracking-widest uppercase">Tailwind</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="py-32 px-6 md:px-12 bg-dark/30">
+    <div class="flex flex-col items-center text-center mb-20" data-aos="fade-up">
+      <h2 class="text-4xl font-bold mb-4">Recent Projects</h2>
+      <div class="w-20 h-1 bg-brand rounded-full"></div>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+      <!-- Project 1 -->
+      <div class="group relative bg-dark rounded-3xl overflow-hidden border border-brand/10 hover:border-brand/40 transition-all" data-aos="fade-up">
+        <div class="h-56 bg-brand/20 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" alt="Work" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+        </div>
+        <div class="p-8">
+          <h3 class="text-xl font-bold mb-3">SaaS Landing Page</h3>
+          <p class="text-gray-400 text-sm mb-6">A high-conversion landing page for a startup using Tailwind CSS and React.</p>
+          <div class="flex gap-4">
+            <a href="#" class="text-brand font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all uppercase tracking-tighter">
+              View Case <i class="fas fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="group relative bg-dark rounded-3xl overflow-hidden border border-brand/10 hover:border-brand/40 transition-all" data-aos="fade-up" data-aos-delay="100">
+        <div class="h-56 bg-brand/20 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800" alt="Work" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+        </div>
+        <div class="p-8">
+          <h3 class="text-xl font-bold mb-3">E-Commerce UI</h3>
+          <p class="text-gray-400 text-sm mb-6">Modern shopping experience with focus on mobile-first architecture.</p>
+          <div class="flex gap-4">
+            <a href="#" class="text-brand font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all uppercase tracking-tighter">
+              View Case <i class="fas fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="group relative bg-dark rounded-3xl overflow-hidden border border-brand/10 hover:border-brand/40 transition-all" data-aos="fade-up" data-aos-delay="200">
+        <div class="h-56 bg-brand/20 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1551288049-bbbda5366392?auto=format&fit=crop&q=80&w=800" alt="Work" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+        </div>
+        <div class="p-8">
+          <h3 class="text-xl font-bold mb-3">Finance Dashboard</h3>
+          <p class="text-gray-400 text-sm mb-6">Interactive data visualization dashboard with dark mode support.</p>
+          <div class="flex gap-4">
+            <a href="#" class="text-brand font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all uppercase tracking-tighter">
+              View Case <i class="fas fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-32 px-6 md:px-12 relative">
+    <div class="max-w-4xl mx-auto glass p-12 rounded-[2rem] text-center border-brand/20 overflow-hidden">
+      <div class="absolute -top-24 -right-24 w-48 h-48 bg-brand/20 blur-[80px]"></div>
+      
+      <h2 class="text-4xl font-bold mb-6" data-aos="fade-up">Ready to start a project?</h2>
+      <p class="text-gray-400 mb-10 max-w-md mx-auto" data-aos="fade-up" data-aos-delay="100">
+        Currently available for new opportunities. I typically respond within 24 hours.
+      </p>
+      
+      <div class="flex flex-col gap-6 items-center" data-aos="fade-up" data-aos-delay="200">
+        <a href="mailto:mn8508300@gmail.com" class="text-2xl md:text-3xl font-bold text-brand hover:scale-105 transition-transform">
+          mn8508300@gmail.com
+        </a>
+        <div class="flex gap-8 mt-4 text-2xl">
+          <a href="#" class="hover:text-brand transition-colors"><i class="fab fa-github"></i></a>
+          <a href="#" class="hover:text-brand transition-colors"><i class="fab fa-linkedin"></i></a>
+          <a href="#" class="hover:text-brand transition-colors"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-12 px-6 text-center border-t border-brand/5">
+    <p class="text-gray-500 text-sm font-medium tracking-widest uppercase">
+      &copy; 2026 Crafted with <span class="text-brand">❤</span> by Muhammad Noman
+    </p>
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: 'ease-out-quad'
+    });
+
+    // Simple scroll header effect
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('nav');
+      if (window.scrollY > 50) {
+        nav.classList.add('py-2', 'bg-darker/90');
+        nav.classList.remove('py-4');
+      } else {
+        nav.classList.add('py-4');
+        nav.classList.remove('py-2', 'bg-darker/90');
+      }
+    });
+  </script>
+</body>
+</html>
